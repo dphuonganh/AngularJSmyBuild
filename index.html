@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script language="javascript" src="libs/angular.min.js"></script>
+    </head>
+    <body>
+        <div ng-app="myapp">
+            <div ng-controller="HeaderController">
+                <h2>Xin chào {{data.title}} đến với website {{data.website}}!</h2>
+            </div>
+            <script>
+                angular.module("myapp", []).controller("HeaderController", function($scope) {
+                    $scope.data = {
+                        title : "Massu",
+                        website : "github.com"
+                    };
+                });
+            </script>
+        </div>
+    </body>
+</html>
