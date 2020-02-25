@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Massu's zoo</title>
+    <meta charset="UTF-8">
+    <script language="javascript" src="libs/angular.min.js"></script>
+</head>
+
+<body>
+    <div ng-app="myApp">
+        <div ng-controller="FooterController">
+            <h2>This is <input type="text" name="input" ng-model="data.title" placeholder="Enter the name here" /> {{data.name}} a very cute
+                {{data.animal}} </h2>
+        </div>
+    </div>
+    <script>
+        angular.module("myApp", []).controller("FooterController", function ($scope) {
+            $scope.data = {
+                name: "",
+                animal: "animal"
+            };
+        });
+    </script>
+    </div>
+</body>
+
+</html>
